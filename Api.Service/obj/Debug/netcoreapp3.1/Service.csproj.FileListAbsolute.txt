@@ -7,3 +7,10 @@ C:\Users\rodri\Desktop\dotnet-api\Api.Service\obj\Debug\netcoreapp3.1\Service.As
 C:\Users\rodri\Desktop\dotnet-api\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
 C:\Users\rodri\Desktop\dotnet-api\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\rodri\Desktop\dotnet-api\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.dll
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.pdb
+C:\Users\rodri\Desktop\dotnet-api\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
