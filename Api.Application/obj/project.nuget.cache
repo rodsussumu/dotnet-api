@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "R578PAzlfmpTFhpjLp72i5lCCIJThbOQo0q2m0jEr2q+NgLzzTjQh1n7YNHc8VczflpfF/HxJUccJPgFQfDPLQ==",
+  "dgSpecHash": "PUMRDijO0/4VG6GyPSIeObs1RuwAwVcD7GOMzokchIH9k5JEg4Fsh+udQBlWWmcsU9345hvQI22l8vhD0/KQgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rodri\\Desktop\\dotnet-api\\Api.Application\\application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodri\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\rodri\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.31\\microsoft.aspnetcore.authentication.jwtbearer.3.1.31.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -76,3 +76,4 @@ C:\Users\rodri\Desktop\dotnet-api\Api.Application\bin\Debug\netcoreapp3.1\Swashb
 C:\Users\rodri\Desktop\dotnet-api\Api.Application\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\rodri\Desktop\dotnet-api\Api.Application\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rodri\Desktop\dotnet-api\Api.Application\obj\Debug\netcoreapp3.1\application.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rodri\Desktop\dotnet-api\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
