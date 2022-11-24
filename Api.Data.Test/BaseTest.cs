@@ -26,8 +26,7 @@ namespace Api.Data.Test
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddDbContext<MyContext>(o =>
                 o.UseMySql($"Persist Security Info=True;Server=localhost;Database={dataBaseName};User=root;Password=root",
-                new MySqlServerVersion(new Version(8, 0, 30)),
-                mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend)),
+                new MySqlServerVersion(new Version(8, 0, 30))),
                 ServiceLifetime.Transient
             );
             ServiceProvider = serviceCollection.BuildServiceProvider();

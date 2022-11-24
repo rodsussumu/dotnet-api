@@ -12,9 +12,7 @@ namespace Api.Data.Context
             // Criar as migrations
             var connectionString = "Server=localhost;Port=3306;Database=Course;Uid=root;Pwd=root";
             var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
-            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0,30)), 
-                mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend)
-            );
+            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0,30)));
             return new MyContext(optionsBuilder.Options);
         }
     }
