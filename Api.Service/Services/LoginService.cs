@@ -19,15 +19,12 @@ namespace Api.Service.Services
 
         private SigningConfigurations _signingConfigurations;
 
-        private TokenConfigurations _tokenConfigurations;
-
         private IConfiguration _configuration { get; }
 
-        public LoginService(IUserRepository repository, SigningConfigurations signingConfigurations, TokenConfigurations tokenConfigurations, IConfiguration configuration)
+        public LoginService(IUserRepository repository, SigningConfigurations signingConfigurations, IConfiguration configuration)
         {
             _repository = repository;
             _signingConfigurations = signingConfigurations;
-            _tokenConfigurations = tokenConfigurations;
             _configuration = configuration;
         }
         public async Task<object> FindByLogin(LoginDto user)
@@ -55,7 +52,7 @@ namespace Api.Service.Services
                         }
                     );
                     DateTime createDate = DateTime.Now;
-                    DateTime expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfigurations.Seconds);
+                    DateTime expirationDate = createDate + TimeSpan.FromSeconds(Convert.ToInt32(Environment.GetEnvironmentVariable("Seconds")));
                     var handler = new JwtSecurityTokenHandler();
                     string token = CreateToken(identity, createDate, expirationDate, handler);
                     return SuccessObject(createDate, expirationDate, token, user);
@@ -73,8 +70,8 @@ namespace Api.Service.Services
         {
             var securityToken = handler.CreateToken(new SecurityTokenDescriptor
             {
-                Issuer = _tokenConfigurations.Issuer,
-                Audience = _tokenConfigurations.Audience,
+                Issuer = Environment.GetEnvironmentVariable("Issuer"),
+                Audience = Environment.GetEnvironmentVariable("Audience"),
                 SigningCredentials = _signingConfigurations.SigningCredentials,
                 Subject = identity,
                 NotBefore = createDate,
@@ -92,7 +89,7 @@ namespace Api.Service.Services
                 authenticated = true,
                 created = createDate.ToString("yyyy-MM-dd HH:mm:ss"),
                 expiration = expirationDate.ToString("yyyy-MM-dd HH:mm:ss"),
-                acessToken = token,
+                accessToken = token,
                 userName = user.Email,
                 message = "Usuário Logado com sucesso"
             };

@@ -39,7 +39,7 @@
         },
 
         {
-            "label": "Data.Testes",
+            "label": "Data.Tests",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -49,7 +49,7 @@
         },
 
         {
-            "label": "Service.Testes",
+            "label": "Service.Tests",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -59,12 +59,22 @@
         },
 
         {
-            "label": "Application.Testes",
+            "label": "Application.Tests",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "test",
                 "${workspaceFolder}/Api.Application.Test/Api.Application.Test.csproj"
+            ],
+        },
+
+        {
+            "label": "Integration.Tests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/Api.Integration.Test/Api.Integration.Test.csproj"
             ],
         }
     ]
