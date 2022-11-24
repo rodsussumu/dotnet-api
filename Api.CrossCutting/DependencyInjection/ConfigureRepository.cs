@@ -20,19 +20,7 @@ namespace Api.CrossCutting.DependencyInjection
 
             serviceCollection.AddScoped<IUserRepository, UserImplementation>();
 
-            if (Environment.GetEnvironmentVariable("DATABASE").ToLower() == "SQLSERVER".ToLower())
-            {
-                serviceCollection.AddDbContext<MyContext>(
-                    options => options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION"))
-                );
-            }
-            else
-            {
-                serviceCollection.AddDbContext<MyContext>(
-                    options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION"))
-            )   ;
-            }
-
+            serviceCollection.AddDbContext<MyContext>(options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION")));
         }
     }
 }

@@ -3,14 +3,13 @@ using System;
 using Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20221123143817_UserMigration")]
+    [Migration("20221123211958_UserMigration")]
     partial class UserMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,46 +17,44 @@ namespace Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.31")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Api.Domain.Entities.UserEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(100)")
+                        .HasColumnType("varchar(100) CHARACTER SET utf8mb4")
                         .HasMaxLength(100);
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(60)")
+                        .HasColumnType("varchar(60) CHARACTER SET utf8mb4")
                         .HasMaxLength(60);
 
                     b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
-                        .IsUnique()
-                        .HasFilter("[Email] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("User");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d3789ec3-56dd-4782-b2c4-dabfc649e48c"),
-                            CreatedAt = new DateTime(2022, 11, 23, 11, 38, 16, 886, DateTimeKind.Local).AddTicks(6405),
+                            Id = new Guid("e2258fdb-2128-4c34-a25d-43685ccd6666"),
+                            CreatedAt = new DateTime(2022, 11, 23, 18, 19, 58, 547, DateTimeKind.Local).AddTicks(3829),
                             Email = "user@example.com",
                             Name = "Teste",
-                            UpdateAt = new DateTime(2022, 11, 23, 11, 38, 16, 887, DateTimeKind.Local).AddTicks(3877)
+                            UpdateAt = new DateTime(2022, 11, 23, 18, 19, 58, 548, DateTimeKind.Local).AddTicks(402)
                         });
                 });
 #pragma warning restore 612, 618
